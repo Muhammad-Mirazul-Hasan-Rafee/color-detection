@@ -1,0 +1,92 @@
+[
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "get_color_name",
+        "kind": 2,
+        "importPath": "ColorDetection",
+        "description": "ColorDetection",
+        "peekOfCode": "def get_color_name(R, G, B):\n    minimum = 10000\n    for i in range(len(csv)):\n        d = abs(R - int(csv.loc[i, \"R\"])) + abs(G - int(csv.loc[i, \"G\"])) + abs(B - int(csv.loc[i, \"B\"]))\n        if d <= minimum:\n            minimum = d\n            cname = csv.loc[i, \"color_name\"]\n    return cname\n# function to get x,y coordinates of mouse double click\ndef draw_function(event, x, y, flags, param):",
+        "detail": "ColorDetection",
+        "documentation": {}
+    },
+    {
+        "label": "draw_function",
+        "kind": 2,
+        "importPath": "ColorDetection",
+        "description": "ColorDetection",
+        "peekOfCode": "def draw_function(event, x, y, flags, param):\n    if event == cv2.EVENT_LBUTTONDBLCLK:\n        global b, g, r, x_pos, y_pos, clicked\n        clicked = True\n        x_pos = x\n        y_pos = y\n        b, g, r = img[y, x]\n        b = int(b)\n        g = int(g)\n        r = int(r)",
+        "detail": "ColorDetection",
+        "documentation": {}
+    },
+    {
+        "label": "img_path",
+        "kind": 5,
+        "importPath": "ColorDetection",
+        "description": "ColorDetection",
+        "peekOfCode": "img_path = r'F:\\python project\\Color Detection\\images.jpg'\nimg = cv2.imread(img_path)\n# declaring global variables (are used later on)\nclicked = False\nr = g = b = x_pos = y_pos = 0\n# Reading csv file with pandas and giving names to each column\nindex = [\"color\", \"color_name\", \"hex\", \"R\", \"G\", \"B\"]\ncsv = pd.read_csv('colors.csv', names=index, header=None)\n# function to calculate minimum distance from all colors and get the most matching color\ndef get_color_name(R, G, B):",
+        "detail": "ColorDetection",
+        "documentation": {}
+    },
+    {
+        "label": "img",
+        "kind": 5,
+        "importPath": "ColorDetection",
+        "description": "ColorDetection",
+        "peekOfCode": "img = cv2.imread(img_path)\n# declaring global variables (are used later on)\nclicked = False\nr = g = b = x_pos = y_pos = 0\n# Reading csv file with pandas and giving names to each column\nindex = [\"color\", \"color_name\", \"hex\", \"R\", \"G\", \"B\"]\ncsv = pd.read_csv('colors.csv', names=index, header=None)\n# function to calculate minimum distance from all colors and get the most matching color\ndef get_color_name(R, G, B):\n    minimum = 10000",
+        "detail": "ColorDetection",
+        "documentation": {}
+    },
+    {
+        "label": "clicked",
+        "kind": 5,
+        "importPath": "ColorDetection",
+        "description": "ColorDetection",
+        "peekOfCode": "clicked = False\nr = g = b = x_pos = y_pos = 0\n# Reading csv file with pandas and giving names to each column\nindex = [\"color\", \"color_name\", \"hex\", \"R\", \"G\", \"B\"]\ncsv = pd.read_csv('colors.csv', names=index, header=None)\n# function to calculate minimum distance from all colors and get the most matching color\ndef get_color_name(R, G, B):\n    minimum = 10000\n    for i in range(len(csv)):\n        d = abs(R - int(csv.loc[i, \"R\"])) + abs(G - int(csv.loc[i, \"G\"])) + abs(B - int(csv.loc[i, \"B\"]))",
+        "detail": "ColorDetection",
+        "documentation": {}
+    },
+    {
+        "label": "r",
+        "kind": 5,
+        "importPath": "ColorDetection",
+        "description": "ColorDetection",
+        "peekOfCode": "r = g = b = x_pos = y_pos = 0\n# Reading csv file with pandas and giving names to each column\nindex = [\"color\", \"color_name\", \"hex\", \"R\", \"G\", \"B\"]\ncsv = pd.read_csv('colors.csv', names=index, header=None)\n# function to calculate minimum distance from all colors and get the most matching color\ndef get_color_name(R, G, B):\n    minimum = 10000\n    for i in range(len(csv)):\n        d = abs(R - int(csv.loc[i, \"R\"])) + abs(G - int(csv.loc[i, \"G\"])) + abs(B - int(csv.loc[i, \"B\"]))\n        if d <= minimum:",
+        "detail": "ColorDetection",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 5,
+        "importPath": "ColorDetection",
+        "description": "ColorDetection",
+        "peekOfCode": "index = [\"color\", \"color_name\", \"hex\", \"R\", \"G\", \"B\"]\ncsv = pd.read_csv('colors.csv', names=index, header=None)\n# function to calculate minimum distance from all colors and get the most matching color\ndef get_color_name(R, G, B):\n    minimum = 10000\n    for i in range(len(csv)):\n        d = abs(R - int(csv.loc[i, \"R\"])) + abs(G - int(csv.loc[i, \"G\"])) + abs(B - int(csv.loc[i, \"B\"]))\n        if d <= minimum:\n            minimum = d\n            cname = csv.loc[i, \"color_name\"]",
+        "detail": "ColorDetection",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 5,
+        "importPath": "ColorDetection",
+        "description": "ColorDetection",
+        "peekOfCode": "csv = pd.read_csv('colors.csv', names=index, header=None)\n# function to calculate minimum distance from all colors and get the most matching color\ndef get_color_name(R, G, B):\n    minimum = 10000\n    for i in range(len(csv)):\n        d = abs(R - int(csv.loc[i, \"R\"])) + abs(G - int(csv.loc[i, \"G\"])) + abs(B - int(csv.loc[i, \"B\"]))\n        if d <= minimum:\n            minimum = d\n            cname = csv.loc[i, \"color_name\"]\n    return cname",
+        "detail": "ColorDetection",
+        "documentation": {}
+    }
+]
